@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Volume Estimation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="form-box">
+    <h2>Traffic Volume Estimation</h2>
+    <form method="post" action="{{ url_for('predict') }}">
+        <label>Date:</label>
+        <input type="date" name="date" required>
+
+        <label>Time:</label>
+        <input type="time" name="time" step="1" required>
+
+        <label>Holiday:</label>
+        <select name="holiday">
+            <option value="None">None</option>
+            <option value="Columbus Day">Columbus Day</option>
+            <option value="Veterans Day">Veterans Day</option>
+            <option value="Thanksgiving Day">Thanksgiving Day</option>
+            <option value="Christmas Day">Christmas Day</option>
+            <option value="New Years Day">New Years Day</option>
+            <option value="Washingtons Birthday">Washingtons Birthday</option>
+            <option value="Memorial Day">Memorial Day</option>
+            <option value="Independence Day">Independence Day</option>
+            <option value="State Fair">State Fair</option>
+            <option value="Labor Day">Labor Day</option>
+            <option value="Martin Luther King Jr Day">Martin Luther King Jr Day</option>
+        </select>
+
+        <label>Weather:</label>
+        <select name="weather">
+            <option value="Clouds">Clouds</option>
+            <option value="Clear">Clear</option>
+            <option value="Rain">Rain</option>
+            <option value="Drizzle">Drizzle</option>
+            <option value="Mist">Mist</option>
+            <option value="Fog">Fog</option>
+            <option value="Thunderstorm">Thunderstorm</option>
+            <option value="Snow">Snow</option>
+            <option value="Smoke">Smoke</option>
+        </select>
+
+        <label>Temperature:</label>
+<input type="number" name="temp" step="0.01" required>
+
+        <label>Rain:</label>
+        <input type="number" name="rain" required>
+
+        <label>Snow:</label>
+        <input type="number" name="snow" required>
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+</body>
+</html>

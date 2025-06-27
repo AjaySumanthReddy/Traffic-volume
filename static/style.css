@@ -1,0 +1,113 @@
+/* Background and overall layout */
+body {
+    background-image: url('https://cdn.vox-cdn.com/uploads/chorus_image/image/44219366/72499026.0.0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f5f5f5;
+    backdrop-filter: blur(4px);
+}
+
+/* Form container */
+.form-box {
+    background: rgba(20, 20, 20, 0.85);
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title */
+.form-box h2 {
+    text-align: center;
+    color: #00ffff;
+    margin-bottom: 25px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Inputs and dropdowns */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    border: 1px solid #666;
+    border-radius: 6px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Labels */
+label {
+    font-weight: 500;
+    color: #ccc;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    transform: scale(1.02);
+}
+
+/* Prediction result box */
+.prediction-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: #00ffcc;
+    font-size: 18px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+    .form-box {
+        margin: 40px 15px;
+        padding: 25px;
+    }
+
+    .form-box h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
